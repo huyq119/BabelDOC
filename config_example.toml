@@ -1,0 +1,67 @@
+# BabelDOC 配置文件示例
+# 使用方式: uv run babeldoc --config config_example.toml --files example.pdf
+
+[babeldoc]
+# 基本设置
+debug = false
+lang-in = "en"
+lang-out = "zh"
+qps = 4
+output = "./output"
+
+# OpenAI配置
+openai = true
+openai-model = "gpt-4o-mini"
+openai-base-url = "https://api.openai.com/v1"
+# openai-api-key = "your-api-key-here"  # 建议通过环境变量设置
+
+# PDF处理选项
+split-short-lines = false
+short-line-split-factor = 0.8
+skip-clean = false
+dual-translate-first = false
+disable-rich-text-translate = false
+use-alternating-pages-dual = false
+watermark-output-mode = "watermarked"  # 选项: "watermarked", "no_watermark", "both"
+max-pages-per-part = 50  # 大文档分片处理
+only-include-translated-page = false
+
+# 扫描文档处理
+skip-scanned-detection = false  # 跳过扫描文档检测以加快处理速度
+ocr-workaround = false  # 扫描PDF的OCR工作区
+auto-enable-ocr-workaround = false  # 自动启用OCR工作区
+
+# 翻译选项
+no-dual = false  # 不输出双语PDF
+no-mono = false  # 不输出单语PDF
+min-text-length = 5
+ignore-cache = false  # 忽略翻译缓存
+
+# 术语表选项
+auto-extract-glossary = true  # 自动提取术语
+save-auto-extracted-glossary = false  # 保存自动提取的术语表
+# glossary-files = "/path/to/glossary1.csv,/path/to/glossary2.csv"
+
+# 性能优化
+pool-max-workers = 8  # 最大工作线程数
+report-interval = 0.1  # 进度报告间隔（秒）
+
+# 高级选项
+translate-table-text = false  # 翻译表格文本（实验性）
+show-char-box = false  # 显示字符边界框（调试用）
+skip-form-render = false  # 跳过表单渲染
+skip-curve-render = false  # 跳过曲线渲染
+only-parse-generate-pdf = false  # 仅解析PDF并生成输出PDF，不进行翻译
+
+# 公式和样式处理
+formular-font-pattern = ""  # 识别公式文本的字体模式
+formular-char-pattern = ""  # 识别公式文本的字符模式
+remove-non-formula-lines = false  # 移除段落区域中的非公式行
+non-formula-line-iou-threshold = 0.9  # 检测段落重叠的IoU阈值
+figure-table-protection-threshold = 0.9  # 保护图表区域中行的IoU阈值
+
+# 字体设置
+primary-font-family = ""  # 覆盖翻译文本的主要字体系列: "serif", "sans-serif", "script"
+
+# 兼容性增强
+enhance-compatibility = false  # 启用所有兼容性增强选项

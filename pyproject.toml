@@ -52,6 +52,7 @@ dependencies = [
     "scipy>=1.15.3",
     "uharfbuzz>=0.50.2",
     "scikit-learn>=1.7.1",
+    "litellm>=1.77.1",
 ]
 
 [project.optional-dependencies]
