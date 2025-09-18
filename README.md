@@ -37,6 +37,7 @@ PDF scientific paper translation and bilingual comparison library.
 - **Self-deployment**: [PDFMathTranslate 2.0](https://github.com/PDFMathTranslate/PDFMathTranslate-next) support for BabelDOC, available for self-deployment + WebUI with more translation services.
 - Provides a simple [command line interface](#getting-started).
 - Provides a [Python API](#python-api).
+- **New**: Complete setup guides for uv environment and Gemini API support.
 - Mainly designed to be embedded into other programs, but can also be used directly for simple translation tasks.
 
 > [!TIP]
@@ -58,6 +59,27 @@ PDF scientific paper translation and bilingual comparison library.
 ## We are hiring
 
 See details: [EN](https://github.com/funstory-ai/jobs) | [ZH](https://github.com/funstory-ai/jobs/blob/main/README_ZH.md)
+
+## 🚀 Quick Setup Guides
+
+### 📦 UV Environment Setup
+For complete uv environment configuration, see: [UV_SETUP_README.md](./UV_SETUP_README.md)
+
+### 🔑 API Key Configuration
+- **OpenAI API**: [API_KEY_SETUP.md](./API_KEY_SETUP.md)
+- **Gemini API**: [GEMINI_SETUP.md](./GEMINI_SETUP.md)
+
+### 🧪 Testing & Verification
+```bash
+# Test basic functionality
+python test_basic_functionality.py
+
+# Test API key configuration
+python test_api_key.py
+
+# Test Gemini API (if using Gemini)
+python test_gemini_api.py
+```
 
 ## Getting Started
 
