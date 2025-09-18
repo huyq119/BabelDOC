@@ -41,6 +41,29 @@ babeldoc/format/txt
 # uv
 uv.lock
 
+# API密钥和敏感配置
+*.env
+.env
+.env.local
+.env.*.local
+config_with_api.toml
+my_*.toml
+*_api_key.toml
+*_secret.toml
+
+# 测试输出
+test_output/
+output/
+*.zh.dual.pdf
+*.zh.mono.pdf
+test_document.pdf
+
+# 临时文件
+temp/
+tmp/
+*.tmp
+*.temp
+
 # Claude Code memory file
 CLAUDE.md
 /.claude
